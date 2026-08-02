@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 测试缓存
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 环境与密钥
+.env
+
+# 日志
+logs/
+*.log
