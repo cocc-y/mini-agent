@@ -2,7 +2,7 @@
 
 一个不依赖任何现有 Agent 框架（langgraph / openhands / openclaw）的极简 Agent。
 核心 Agent Runtime（LLM 输出解析、工具注册与调用、Agent 循环、上下文管理、
-Session 管理）全部自行实现，仅调用真实 LLM 的 Chat Completions 接口。
+Session 管理），仅调用真实 LLM 的 Chat Completions 接口。
 
 ```
 用户输入 ──► LLM 决策 ──► 调用工具 ──► 观察结果 ──► 继续循环 / 返回答案
@@ -102,7 +102,7 @@ python -X utf8 -m pytest -q
 
 ```
 agent/
-├── core/                    # 核心 Agent Runtime（全部自行实现）
+├── core/                    # 核心 Agent Runtime
 │   ├── llm.py               # LLM 客户端：标准库 urllib 直连 /chat/completions
 │   ├── parser.py            # LLM 输出解析：提取 思考 / 工具调用 / 最终答案
 │   ├── tool.py              # 工具框架：Tool 基类 + ToolRegistry（注册/校验/执行）
